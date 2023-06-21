@@ -48,13 +48,13 @@ public void setEmp_educational(String educational) {
 public int basic_Salary() {
     int salar;
     educational=getEmp_educational;
-    experience=getEmp_experience
+    experience=getEmp_experience;
 if (educational="Bachelor"){
-salar= (500) + (500 * 5% * experience);
+salar= (500) + (500 * 0.05 * experience);
 
 }
 else if(educational="diploma" ){
-  salar= (250) + (250 * 5% * experience)  ;
+  salar= (250) + (250 * 0.05 * experience)  ;
 }
 else{
   salar= 0;
@@ -64,17 +64,17 @@ return salar;
 public void calculated_Salary(int salar){
 position=getEmp_position();
 if(position="full"){
- salar= basic Salary * 3% ;
+ salar= salary * 0.03 ;
 }
 else{
- salar=basic Salary * 1.5% ;
+ salar=salary * 0.015;
 }
 }
 
 @Override  
 public String toString() {  
-    return "Employee [name = " + getEmp_name() + ", salary = " + salary + ", position = " + getEmp_position() + ", experience = " + getEmp_experience()  
-            + ", educational = " + getEmp_educational() "]";  
+    return "Employee [name = " + getEmp_name()  + getEmp_position() + ", experience = " + getEmp_experience()  
+            + ", educational = " + getEmp_educational()+"]";  
     } 
 }
 
